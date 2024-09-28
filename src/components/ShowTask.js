@@ -11,12 +11,12 @@ export const ShowTask = ({tasklist, setTasklist}) => {
             <span className='count'>{tasklist.length}</span>
 
           </div>
-          <button className='clearAll'> clear All</button>
+          <button className='clearAll' onClick={() => setTasklist([])}> clear All</button>
 
         </div>
         <ul>
-          {tasks.map((task) => (
-            <li>
+          {tasklist.map((task) => (
+            <li key={task.id}>
             <p>
               <span className='name'>{task.name}</span>
               <span className='time'> {task.time}</span>
