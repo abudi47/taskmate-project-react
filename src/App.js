@@ -5,7 +5,7 @@ import { ShowTask } from './components/ShowTask';
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <AddTask />
       <ShowTask />
 
