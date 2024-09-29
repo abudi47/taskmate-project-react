@@ -6,12 +6,23 @@ import { ShowTask } from './components/ShowTask';
 function App() {
 
   const [tasklist , setTasklist] = useState([]);
+  const [task , setTask] = useState({});
 
   return (
     <div className="App">
       <Header />
-      <AddTask tasklist={tasklist} setTasklist={setTasklist}/>
-      <ShowTask tasklist={tasklist} setTasklist={setTasklist}/>
+      <AddTask 
+      tasklist={tasklist} 
+      setTasklist={setTasklist}
+      task={task}
+      setTask={setTask}
+      />
+      <ShowTask
+       tasklist={tasklist} 
+       setTasklist={setTasklist}
+       task={task}
+      setTask={setTask}
+       />
 
 
       
