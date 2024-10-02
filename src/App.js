@@ -3,6 +3,8 @@ import './App.css';
 import { AddTask } from './components/AddTask';
 import { Header } from './components/Header';
 import { ShowTask } from './components/ShowTask';
+import Footer from './components/Footer';
+
 
 function App() {
   // Check if localStorage contains valid JSON or fallback to an empty array
@@ -24,6 +26,7 @@ function App() {
   }, [tasklist]);
 
   return (
+    <div>
     <div className="App">
       <Header />
       <AddTask
@@ -38,6 +41,9 @@ function App() {
         task={task}
         setTask={setTask}
       />
+      
+    </div>
+    <Footer />
     </div>
   );
 }
